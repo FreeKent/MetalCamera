@@ -1,24 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="alS-P3-jKl">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Player-->
+        <scene sceneID="aJR-mY-a18">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController title="Player" id="1za-rg-6hZ" customClass="PlayerViewController" customModule="MetalCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S8J-9v-oaE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGQ-rp-xbh">
+                                <rect key="frame" x="162.66666666666666" y="722" width="68" height="35"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Share">
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="shareButtonTapped" destination="1za-rg-6hZ" eventType="touchUpInside" id="Cd3-9u-r9J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AaS-Mf-pF3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AaS-Mf-pF3" firstAttribute="bottom" secondItem="lGQ-rp-xbh" secondAttribute="bottom" constant="12" id="8cI-U1-evF"/>
+                            <constraint firstItem="lGQ-rp-xbh" firstAttribute="centerX" secondItem="AaS-Mf-pF3" secondAttribute="centerX" id="Psh-uj-aC7"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Player" image="play" catalog="system" id="5aY-Pc-ICc"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Btl-Pg-2JR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="208" y="-486"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="OXO-Ee-CwN">
+            <objects>
+                <viewController title="Camera" id="UzT-pO-4QM" customClass="CameraViewController" customModule="MetalCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YgF-Fu-X3S">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jjn-6d-zQZ">
+                                <rect key="frame" x="117.66666666666669" y="731" width="158" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uJq-sS-wyd"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Scale"/>
+                                    <segment title="Fit"/>
+                                    <segment title="Fill"/>
+                                </segments>
+                                <connections>
+                                    <action selector="shaderSelected:" destination="UzT-pO-4QM" eventType="valueChanged" id="sVU-yO-Vdp"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y46-iR-6gQ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="664"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffA-tR-Vj8">
+                                <rect key="frame" x="319" y="729" width="58" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="VHS"/>
+                                <connections>
+                                    <action selector="vhsButtonTapped:" destination="UzT-pO-4QM" eventType="touchUpInside" id="lba-Je-CGu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhs-dJ-Txq">
+                                <rect key="frame" x="16" y="729" width="79" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Record"/>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="UzT-pO-4QM" eventType="touchUpInside" id="3MV-2s-q7L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ydn-EL-T16"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ydn-EL-T16" firstAttribute="bottom" secondItem="Vhs-dJ-Txq" secondAttribute="bottom" constant="5" id="0El-7U-23e"/>
+                            <constraint firstItem="Ydn-EL-T16" firstAttribute="trailing" secondItem="y46-iR-6gQ" secondAttribute="trailing" id="6hi-Zv-uRd"/>
+                            <constraint firstItem="Jjn-6d-zQZ" firstAttribute="centerX" secondItem="Ydn-EL-T16" secondAttribute="centerX" id="Dic-ND-DQU"/>
+                            <constraint firstItem="Jjn-6d-zQZ" firstAttribute="top" secondItem="y46-iR-6gQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Gxu-Dy-MYa"/>
+                            <constraint firstItem="Ydn-EL-T16" firstAttribute="bottom" secondItem="Jjn-6d-zQZ" secondAttribute="bottom" constant="8" id="NFk-fv-NkA"/>
+                            <constraint firstItem="y46-iR-6gQ" firstAttribute="top" secondItem="Ydn-EL-T16" secondAttribute="top" id="bBg-1y-djb"/>
+                            <constraint firstItem="Vhs-dJ-Txq" firstAttribute="leading" secondItem="Ydn-EL-T16" secondAttribute="leading" constant="16" id="bCY-9e-Idl"/>
+                            <constraint firstItem="Ydn-EL-T16" firstAttribute="bottom" secondItem="ffA-tR-Vj8" secondAttribute="bottom" constant="5" id="egd-fS-mcu"/>
+                            <constraint firstItem="y46-iR-6gQ" firstAttribute="leading" secondItem="Ydn-EL-T16" secondAttribute="leading" id="jue-Cr-Otd"/>
+                            <constraint firstItem="Ydn-EL-T16" firstAttribute="trailing" secondItem="ffA-tR-Vj8" secondAttribute="trailing" constant="16" id="sgN-l9-0av"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Camera" image="camera" catalog="system" id="OOP-qd-Ym9"/>
+                    <connections>
+                        <outlet property="cameraView" destination="y46-iR-6gQ" id="Lnp-qf-7mP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQm-Ls-WQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206.87022900763358" y="-1187.323943661972"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pEV-rA-x5a">
+            <objects>
+                <tabBarController id="alS-P3-jKl" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZYC-4c-yN2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UzT-pO-4QM" kind="relationship" relationship="viewControllers" id="9FF-hA-fZx"/>
+                        <segue destination="1za-rg-6hZ" kind="relationship" relationship="viewControllers" id="vfE-JV-y1s"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8x-23-TNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-752" y="-689"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="play" catalog="system" width="117" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

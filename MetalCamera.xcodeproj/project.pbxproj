@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12272062B2292EA005F7547 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12272052B2292EA005F7547 /* CameraService.swift */; };
+		A12272082B229878005F7547 /* vhs.metal in Sources */ = {isa = PBXBuildFile; fileRef = A12272072B229878005F7547 /* vhs.metal */; };
 		A14AE2132B1CA30500D2D619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14AE2122B1CA30500D2D619 /* AppDelegate.swift */; };
 		A14AE2152B1CA30500D2D619 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14AE2142B1CA30500D2D619 /* SceneDelegate.swift */; };
-		A14AE2172B1CA30500D2D619 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14AE2162B1CA30500D2D619 /* ViewController.swift */; };
+		A14AE2172B1CA30500D2D619 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14AE2162B1CA30500D2D619 /* CameraViewController.swift */; };
 		A14AE21A2B1CA30500D2D619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14AE2182B1CA30500D2D619 /* Main.storyboard */; };
 		A14AE21C2B1CA30600D2D619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14AE21B2B1CA30600D2D619 /* Assets.xcassets */; };
 		A14AE21F2B1CA30600D2D619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14AE21D2B1CA30600D2D619 /* LaunchScreen.storyboard */; };
+		A14AE2272B1CA53D00D2D619 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14AE2262B1CA53D00D2D619 /* PlayerViewController.swift */; };
+		A14AE2292B1CEFA800D2D619 /* kernels.metal in Sources */ = {isa = PBXBuildFile; fileRef = A14AE2282B1CEFA800D2D619 /* kernels.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A12272052B2292EA005F7547 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		A12272072B229878005F7547 /* vhs.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vhs.metal; sourceTree = "<group>"; };
 		A14AE20F2B1CA30500D2D619 /* MetalCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14AE2122B1CA30500D2D619 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A14AE2142B1CA30500D2D619 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A14AE2162B1CA30500D2D619 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A14AE2162B1CA30500D2D619 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		A14AE2192B1CA30500D2D619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A14AE21B2B1CA30600D2D619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A14AE21E2B1CA30600D2D619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A14AE2202B1CA30600D2D619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A14AE2262B1CA53D00D2D619 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		A14AE2282B1CEFA800D2D619 /* kernels.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = kernels.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +66,15 @@
 			children = (
 				A14AE2122B1CA30500D2D619 /* AppDelegate.swift */,
 				A14AE2142B1CA30500D2D619 /* SceneDelegate.swift */,
-				A14AE2162B1CA30500D2D619 /* ViewController.swift */,
+				A14AE2162B1CA30500D2D619 /* CameraViewController.swift */,
+				A12272052B2292EA005F7547 /* CameraService.swift */,
+				A14AE2262B1CA53D00D2D619 /* PlayerViewController.swift */,
 				A14AE2182B1CA30500D2D619 /* Main.storyboard */,
 				A14AE21B2B1CA30600D2D619 /* Assets.xcassets */,
 				A14AE21D2B1CA30600D2D619 /* LaunchScreen.storyboard */,
 				A14AE2202B1CA30600D2D619 /* Info.plist */,
+				A14AE2282B1CEFA800D2D619 /* kernels.metal */,
+				A12272072B229878005F7547 /* vhs.metal */,
 			);
 			path = MetalCamera;
 			sourceTree = "<group>";
@@ -138,7 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A14AE2172B1CA30500D2D619 /* ViewController.swift in Sources */,
+				A14AE2172B1CA30500D2D619 /* CameraViewController.swift in Sources */,
+				A14AE2292B1CEFA800D2D619 /* kernels.metal in Sources */,
+				A12272062B2292EA005F7547 /* CameraService.swift in Sources */,
+				A14AE2272B1CA53D00D2D619 /* PlayerViewController.swift in Sources */,
+				A12272082B229878005F7547 /* vhs.metal in Sources */,
 				A14AE2132B1CA30500D2D619 /* AppDelegate.swift in Sources */,
 				A14AE2152B1CA30500D2D619 /* SceneDelegate.swift in Sources */,
 			);
@@ -290,11 +306,13 @@
 				DEVELOPMENT_TEAM = W4M6RR679M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MetalCamera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Hi;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = Hello;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,11 +336,13 @@
 				DEVELOPMENT_TEAM = W4M6RR679M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MetalCamera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Hi;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = Hello;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
